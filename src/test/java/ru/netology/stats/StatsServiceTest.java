@@ -12,7 +12,7 @@ class StatsServiceTest {
         StatsService service = new StatsService();
 
         long actual = service.totalSale(sales);
-        long expected  = 8 + 15 + 13 + 15 + 17 + 20 + 19 + 20 + 7 + 14 + 14 + 18;
+        long expected = 8 + 15 + 13 + 15 + 17 + 20 + 19 + 20 + 7 + 14 + 14 + 18;
 
         Assertions.assertEquals(expected, actual);
 
@@ -24,7 +24,7 @@ class StatsServiceTest {
         StatsService service = new StatsService();
 
         long actual = service.averageSale(sales);
-        long expected  = (8 + 15 + 13 + 15 + 17 + 20 + 19 + 20 + 7 + 14 + 14 + 18) / 12;
+        long expected = (8 + 15 + 13 + 15 + 17 + 20 + 19 + 20 + 7 + 14 + 14 + 18) / 12;
 
         Assertions.assertEquals(expected, actual);
 
@@ -36,40 +36,43 @@ class StatsServiceTest {
         StatsService service = new StatsService();
 
         long actual = service.monthMaxSale(sales);
-        long expected  = 8;
+        long expected = 8;
 
         Assertions.assertEquals(expected, actual);
 
     }
+
     @Test
     public void testMonthMin() {
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         StatsService service = new StatsService();
 
         long actual = service.monthMinSale(sales);
-        long expected  = 9;
+        long expected = 9;
 
         Assertions.assertEquals(expected, actual);
 
     }
+
     @Test
     public void testMonthsBellowAverage() {
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         StatsService service = new StatsService();
 
         long actual = service.monthBellowAverage(sales);
-        long expected  = 5;
+        long expected = 5;
 
         Assertions.assertEquals(expected, actual);
 
     }
+
     @Test
     public void testMonthsUnderAverage() {
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         StatsService service = new StatsService();
 
         long actual = service.monthUnderAverage(sales);
-        long expected  = 5;
+        long expected = 5;
 
         Assertions.assertEquals(expected, actual);
 
